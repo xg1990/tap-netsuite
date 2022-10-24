@@ -11,7 +11,7 @@ setup(
     classifiers=['Programming Language :: Python :: 3 :: Only'],
     py_modules=['tap_netsuite'],
     install_requires=[
-        'netsuitesdk @ git+https://github.com/xg1990/netsuite-sdk-py.git@1fa057d12f96cf7354de7951392cf92e5549543c#egg=netsuitesdk', # USING THE fixed VERSION
+        'netsuitesdk @ git+https://github.com/xg1990/netsuite-sdk-py.git@6d739726a361892fcb11a389c947b3710f244639#egg=netsuitesdk', # USING THE fixed VERSION
         'requests==2.21.0',
         'singer-python==5.3.1',
         'xmltodict==0.11.0',
