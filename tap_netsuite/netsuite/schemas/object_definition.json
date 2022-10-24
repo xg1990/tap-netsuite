@@ -935,7 +935,21 @@
   ],
   "InboundShipment": [
     {"displayName": "Id", "name": "internalId", "type": "string"},
+    {"displayName": "ActualDeliveryDate", "name": "actualDeliveryDate", "type": "datetime"},
+    {"displayName": "ActualShippingDate", "name": "actualShippingDate", "type": "datetime"},
     {"displayName": "BillOfLanding", "name": "billOfLanding", "type": "string"},
-    {"displayName": "ShipmentNumber", "name": "shipmentNumber", "type": "string"}
+    {"displayName": "CustomFieldList", "name": "customFieldList", "type": "string"},
+    {"displayName": "CustomForm", "name": "customForm", "type": "string"},
+    {"displayName": "ExpectedDeliveryDate", "name": "expectedDeliveryDate", "type": "datetime"},
+    {"displayName": "expectedShippingDate", "name": "expectedShippingDate", "type": "datetime"},
+    {"displayName": "ExternalDocumentNumber", "name": "externalDocumentNumber", "type": "string"},
+    {"displayName": "ItemsList", "name": "itemsList", "type": "string"},
+    {"displayName": "LandedCostList", "name": "landedCostList", "type": "string"},
+    {"displayName": "ShipmentBaseCurrency", "name": "shipmentBaseCurrency", "type": "string"},
+    {"displayName": "shipmentMemo", "name": "shipmentMemo", "type": "string"},
+    {"displayName": "ShipmentNumber", "name": "shipmentNumber", "type": "string"},
+    {"displayName": "shipmentStatus", "name": "shipmentStatus", "type": "string"},
+    {"displayName": "VesselNumber", "name": "vesselNumber", "type": "string"},
+    {"displayName": "ExternalId", "name": "externalId", "type": "string"}
   ]
 }
