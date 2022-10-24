@@ -932,5 +932,10 @@
     {"displayName": "TranDate", "name": "tranDate", "type": "datetime"},
     {"displayName": "TranId", "name": "tranId", "type": "string"},
     {"displayName": "VatRegNum", "name": "vatRegNum", "type": "string"}
+  ],
+  "InboundShipment": [
+    {"displayName": "Id", "name": "internalId", "type": "string"},
+    {"displayName": "BillOfLanding", "name": "billOfLanding", "type": "string"},
+    {"displayName": "ShipmentNumber", "name": "shipmentNumber", "type": "string"}
   ]
 }

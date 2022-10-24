@@ -363,9 +363,10 @@ class PurchaseOrder(ApiBase):
         return None
 
 
-class InboundShipments(ApiBase):
+class InboundShipment(ApiBase):
+    # Reference documentation
     def __init__(self, ns_client):
-        ApiBase.__init__(self, ns_client=ns_client, type_name='inboundShipments')
+        ApiBase.__init__(self, ns_client=ns_client, type_name='InboundShipment')
         self.require_paging = True
         self.require_lastModified_date = True
 
@@ -375,14 +376,15 @@ class InboundShipments(ApiBase):
             )
 
     def get_all_generator(self, page_size=200, last_modified_date=None):
-        record_type_search_field = self.ns_client.SearchStringField(searchValue='InboundShipments', operator='contains')
-        basic_search = self.ns_client.basic_search_factory('Transaction',
+        # record_type_search_field = self.ns_client.SearchStringField(searchValue='InboundShipments', operator='contains')
+        basic_search = self.ns_client.basic_search_factory('InboundShipment',
                                                            lastModifiedDate=last_modified_date,
-                                                           recordType=record_type_search_field)
+                                                        #    recordType=record_type_search_field
+                                                           )
 
         paginated_search = PaginatedSearch(client=self.ns_client,
                                            basic_search=basic_search,
-                                           type_name='Transaction',
+                                           type_name='InboundShipment',
                                            pageSize=page_size)
 
         return self._paginated_search_to_generator(paginated_search=paginated_search)
