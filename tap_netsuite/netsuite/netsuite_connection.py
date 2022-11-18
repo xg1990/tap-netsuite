@@ -19,7 +19,7 @@ from netsuitesdk.api.tax_items import TaxItems
 import time
 import json
 import singer
-from .transaction_entities import Customers, PurchaseOrder, Invoice, JournalEntries, InventoryTransfer, InventoryAdjustment, InventoryItem, VendorBills, VendorPayments, SalesOrders, CreditMemos, Items, InboundShipment
+from .transaction_entities import Customers, PurchaseOrder, Invoice, JournalEntries, InventoryTransfer, InventoryAdjustment, InventoryItem, VendorBills, VendorPayments, SalesOrders, CreditMemos, Items, InboundShipment, ItemReceipt
 from .netsuite_client import ExtendedNetSuiteClient
 
 LOGGER = singer.get_logger()
@@ -91,6 +91,7 @@ class ExtendedNetSuiteConnection:
             "Subsidiaries": self.subsidiaries,
             "TaxItems": TaxItems(ns_client),
             "InboundShipment": InboundShipment(ns_client),
+            "ItemReceipt": ItemReceipt(ns_client),
         }
 
     def _query_entity(self, data, entity, stream):
