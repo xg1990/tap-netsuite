@@ -951,5 +951,32 @@
     {"displayName": "ShipmentStatus", "name": "shipmentStatus", "type": "string"},
     {"displayName": "VesselNumber", "name": "vesselNumber", "type": "string"},
     {"displayName": "ExternalId", "name": "externalId", "type": "string"}
+  ],
+  "ItemReceipt": [
+    {"displayName": "Id", "name": "internalId", "type": "string"},
+    {"displayName": "AccountingBookDetailList", "name": "accountingBookDetailList", "type": "datetime"},
+    {"displayName": "CreatedDate", "name": "createdDate", "type": "datetime"},
+    {"displayName": "CreatedFrom", "name": "createdFrom", "type": "string"},
+    {"displayName": "Currency", "name": "currency", "type": "string"},
+    {"displayName": "CurrencyName", "name": "currencyName", "type": "string"},
+    {"displayName": "CustomFieldList", "name": "customFieldList", "type": "string"},
+    {"displayName": "CustomForm", "name": "customForm", "type": "string"},
+    {"displayName": "Entity", "name": "entity", "type": "string"},
+    {"displayName": "ExchangeRate", "name": "exchangeRate", "type": "string"},
+    {"displayName": "ExpenseList", "name": "expenseList", "type": "string"},
+    {"displayName": "InboundShipment", "name": "inboundShipment", "type": "string"},
+    {"displayName": "ItemFulfillment", "name": "itemFulfillment", "type": "string"},
+    {"displayName": "ItemList", "name": "itemList", "type": "string"},
+    {"displayName": "LandedCostMethod", "name": "landedCostMethod", "type": "string"},
+    {"displayName": "LandedCostPerLine", "name": "landedCostPerLine", "type": "boolean"},
+    {"displayName": "LandedCostsList", "name": "landedCostsList", "type": "string"},
+    {"displayName": "LastModifiedDate", "name": "lastModifiedDate", "type": "datetime"},
+    {"displayName": "Memo", "name": "memo", "type": "string"},
+    {"displayName": "Partner", "name": "partner", "type": "string"},
+    {"displayName": "PostingPeriod", "name": "postingPeriod", "type": "string"},
+    {"displayName": "Subsidiary", "name": "subsidiary", "type": "string"},
+    {"displayName": "TranDate", "name": "tranDate", "type": "datetime"},
+    {"displayName": "TranId", "name": "tranId", "type": "string"},
+    {"displayName": "ExternalId", "name": "externalId", "type": "string"}
   ]
 }
