@@ -15,11 +15,12 @@ from netsuitesdk.api.custom_lists import CustomLists
 from netsuitesdk.api.custom_records import CustomRecords
 from netsuitesdk.api.price_level import PriceLevel
 from netsuitesdk.api.tax_items import TaxItems
+from netsuitesdk.api.projects import Projects
 
 import time
 import json
 import singer
-from .transaction_entities import Customers, PurchaseOrder, Invoice, JournalEntries, InventoryTransfer, InventoryAdjustment, InventoryItem, VendorBills, VendorPayments, SalesOrders, CreditMemos, Items, InboundShipment, ItemReceipt
+from .transaction_entities import Customers, PurchaseOrder, Invoice, JournalEntries, InventoryTransfer, InventoryAdjustment, InventoryItem, VendorBills, VendorPayments, SalesOrders, CreditMemos, Items, InboundShipment, ItemReceipt, BankAccounts, Locations
 from .netsuite_client import ExtendedNetSuiteClient
 
 LOGGER = singer.get_logger()
@@ -74,7 +75,7 @@ class ExtendedNetSuiteConnection:
             'Customer': Customers(ns_client),
             'Invoice': Invoice(ns_client),
             'Accounts': Accounts(ns_client),
-            'JournalEntry': JournalEntries(ns_client),
+            'JournalEntries': JournalEntries(ns_client),
             'Commission': JournalEntries(ns_client),
             'Classifications': Classifications(ns_client),
             'Vendors': self.vendors,
@@ -92,6 +93,9 @@ class ExtendedNetSuiteConnection:
             "TaxItems": TaxItems(ns_client),
             "InboundShipment": InboundShipment(ns_client),
             "ItemReceipt": ItemReceipt(ns_client),
+            "Projects": Projects(ns_client),
+            "BankAccounts": BankAccounts(ns_client),
+            "Locations": Locations(ns_client),
         }
 
     def _query_entity(self, data, entity, stream):
